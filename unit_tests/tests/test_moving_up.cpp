@@ -2,8 +2,28 @@
 #include "catch.hpp"
 #include "../../2048/app/Game.hpp"
 #include "../../2048/app/KeyPushManager.hpp"
-#include "../../2048/app/Kbhit.h"
 #include "../../2048/app/Config.hpp"
+
+int movingUp(Game::GameBoard i, Game::GameBoard e){
+    Game game;
+    Game::GameBoard initial = i;
+    game.setGameBoard(initial);
+    KeyPushManager key(game);
+    key.setMKey(int('w'));
+    key.onKeyboardHit();
+    Game::GameBoard newGb = key.getGameBoard();
+
+    Game::GameBoard expected = e;
+
+    int eq = 1;
+    for(int i=0;i<GAMEBOARD_ROWS;i++)
+        for (int j=0;j<GAMEBOARD_COLS;j++)
+            if (newGb.at(i).at(j)!=expected.at(i).at(j)){
+                eq=0;
+                break;
+            }
+    return eq;
+}
 
 TEST_CASE("Moving up (empty rows/cols, no merging tiles)"){
     Game game;
@@ -13,10 +33,6 @@ TEST_CASE("Moving up (empty rows/cols, no merging tiles)"){
      {0,0,0,4,0},
      {0,16,8,0,0}
     };
-    game.setGameBoard(initial);
-    KeyPushManager key(game);
-    key.moveUp();
-    Game::GameBoard newGb = key.getGameBoard();
 
     Game::GameBoard expected = {
      {0,2,8,4,0},
@@ -25,13 +41,7 @@ TEST_CASE("Moving up (empty rows/cols, no merging tiles)"){
      {0,0,0,0,0}
     };
 
-    int eq = 1;
-    for(int i=0;i<GAMEBOARD_ROWS;i++)
-        for (int j=0;j<GAMEBOARD_COLS;j++)
-            if (newGb.at(i).at(j)!=expected.at(i).at(j)){
-                eq=0;
-                break;
-            }
+    int eq = movingUp(initial, expected);
 
     REQUIRE(eq==1);
 }
@@ -44,10 +54,6 @@ TEST_CASE("Moving up (possible merges)"){
      {0,2,0,0,0},
      {0,0,0,4,0}
     };
-    game.setGameBoard(initial);
-    KeyPushManager key(game);
-    key.moveUp();
-    Game::GameBoard newGb = key.getGameBoard();
 
     Game::GameBoard expected = {
      {0,4,0,8,2},
@@ -56,13 +62,7 @@ TEST_CASE("Moving up (possible merges)"){
      {0,0,0,0,0}
     };
 
-    int eq = 1;
-    for(int i=0;i<GAMEBOARD_ROWS;i++)
-        for (int j=0;j<GAMEBOARD_COLS;j++)
-            if (newGb.at(i).at(j)!=expected.at(i).at(j)){
-                eq=0;
-                break;
-            }
+    int eq = movingUp(initial, expected);
 
     REQUIRE(eq==1);
 }
@@ -75,10 +75,6 @@ TEST_CASE("Moving up (overlaping merges)"){
      {4,0,4,0,4},
      {4,0,8,4,4}
     };
-    game.setGameBoard(initial);
-    KeyPushManager key(game);
-    key.moveUp();
-    Game::GameBoard newGb = key.getGameBoard();
 
     Game::GameBoard expected = {
      {4,0,16,2,4},
@@ -87,13 +83,7 @@ TEST_CASE("Moving up (overlaping merges)"){
      {0,0,0,0,0}
     };
 
-    int eq = 1;
-    for(int i=0;i<GAMEBOARD_ROWS;i++)
-        for (int j=0;j<GAMEBOARD_COLS;j++)
-            if (newGb.at(i).at(j)!=expected.at(i).at(j)){
-                eq=0;
-                break;
-            }
+    int eq = movingUp(initial, expected);
 
     REQUIRE(eq==1);
 }
@@ -106,10 +96,6 @@ TEST_CASE("Moving up (no possible moves)"){
      {32,4,0,2,32},
      {16,8,0,16,0}
     };
-    game.setGameBoard(initial);
-    KeyPushManager key(game);
-    key.moveUp();
-    Game::GameBoard newGb = key.getGameBoard();
 
     Game::GameBoard expected = {
      {2,4,8,2,32},
@@ -118,13 +104,7 @@ TEST_CASE("Moving up (no possible moves)"){
      {16,8,0,16,0}
     };
 
-    int eq = 1;
-    for(int i=0;i<GAMEBOARD_ROWS;i++)
-        for (int j=0;j<GAMEBOARD_COLS;j++)
-            if (newGb.at(i).at(j)!=expected.at(i).at(j)){
-                eq=0;
-                break;
-            }
+    int eq = movingUp(initial, expected);
 
     REQUIRE(eq==1);
 }
