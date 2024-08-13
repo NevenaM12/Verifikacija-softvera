@@ -1,0 +1,141 @@
+diff -ruN 2048-original/app/Game.hpp 2048/app/Game.hpp
+--- 2048-original/app/Game.hpp	2017-08-21 14:30:28.000000000 +0200
++++ 2048/app/Game.hpp	2024-08-13 19:39:07.776606745 +0200
+@@ -3,7 +3,7 @@
+ #include <iostream>
+ #include <vector>
+ 
+-#include "app/Config.hpp"
++#include "Config.hpp"
+ 
+ class Game
+ {
+diff -ruN 2048-original/app/KeyPushManager.hpp 2048/app/KeyPushManager.hpp
+--- 2048-original/app/KeyPushManager.hpp	2017-08-21 14:30:28.000000000 +0200
++++ 2048/app/KeyPushManager.hpp	2024-08-13 19:40:48.565959333 +0200
+@@ -1,7 +1,7 @@
+ #ifndef APP_KEY_PUSH_MANAGER_HPP
+ #define APP_KEY_PUSH_MANAGER_HPP
+-#include "app/Kbhit.h"
+-#include "app/Game.hpp"
++#include "Kbhit.h"
++#include "Game.hpp"
+ 
+ class KeyPushManager
+ {
+@@ -10,7 +10,10 @@
+ 
+   public:
+     void waitKeyPush();
++    void onKeyboardHitRefactored();
+     void onKeyboardHit();
++    Game::GameBoard getGameBoard() const;
++    void setMKey(int key);
+ 
+   public:
+     void moveUp();
+Binary files 2048-original/bin/2048 and 2048/bin/2048 differ
+diff -ruN 2048-original/.git 2048/.git
+--- 2048-original/.git	1970-01-01 01:00:00.000000000 +0100
++++ 2048/.git	2024-08-02 20:19:25.579652596 +0200
+@@ -0,0 +1 @@
++gitdir: ../.git/modules/2048
+diff -ruN 2048-original/src/Game.cpp 2048/src/Game.cpp
+--- 2048-original/src/Game.cpp	2017-08-21 14:30:28.000000000 +0200
++++ 2048/src/Game.cpp	2024-08-05 18:50:49.750714660 +0200
+@@ -1,8 +1,8 @@
+ #include <iterator>
+ #include <algorithm> // std::find
+-#include "app/Game.hpp"
+-#include "app/KeyPushManager.hpp"
+-#include "app/Utils.hpp"
++#include "../app/Game.hpp"
++#include "../app/KeyPushManager.hpp"
++#include "../app/Utils.hpp"
+ 
+ Game::Game()
+ {
+diff -ruN 2048-original/src/Kbhit.cpp 2048/src/Kbhit.cpp
+--- 2048-original/src/Kbhit.cpp	2017-08-21 14:30:28.000000000 +0200
++++ 2048/src/Kbhit.cpp	2024-08-05 18:58:28.036697618 +0200
+@@ -1,4 +1,4 @@
+-#include "app/Kbhit.h"
++#include "../app/Kbhit.h"
+ #include <unistd.h> // read()
+ 
+ Kbhit::Kbhit()
+diff -ruN 2048-original/src/KeyPushManager.cpp 2048/src/KeyPushManager.cpp
+--- 2048-original/src/KeyPushManager.cpp	2017-08-21 14:30:28.000000000 +0200
++++ 2048/src/KeyPushManager.cpp	2024-08-13 19:41:57.273836069 +0200
+@@ -1,4 +1,4 @@
+-#include "app/KeyPushManager.hpp"
++#include "../app/KeyPushManager.hpp"
+ 
+ KeyPushManager::KeyPushManager(Game &game) : game(game)
+ {
+@@ -11,7 +11,18 @@
+   m_key = m_kbhit.getch();
+   game.setKey(m_key);
+ 
++  this->onKeyboardHitRefactored();
++}
++
++void KeyPushManager::onKeyboardHitRefactored()
++{
+   this->onKeyboardHit();
++  if (m_isGameBoardMoved)
++  {
++    game.fillRandPos(gb);
++  }
++  game.setGameBoard(gb);
++  game.checkFinish();
+ }
+ 
+ void KeyPushManager::onKeyboardHit()
+@@ -44,12 +55,7 @@
+       }
+       break;
+   }
+-  if (m_isGameBoardMoved)
+-  {
+-    game.fillRandPos(gb);
+-  }
+   game.setGameBoard(gb);
+-  game.checkFinish();
+ }
+ 
+ void KeyPushManager::moveUp()
+@@ -169,3 +175,10 @@
+   }
+ }
+ 
++Game::GameBoard KeyPushManager::getGameBoard() const{
++  return gb;
++}
++
++void KeyPushManager::setMKey(int key){
++  m_key = key;
++}
+diff -ruN 2048-original/src/main.cpp 2048/src/main.cpp
+--- 2048-original/src/main.cpp	2017-08-21 14:30:28.000000000 +0200
++++ 2048/src/main.cpp	2024-08-10 20:17:55.064718688 +0200
+@@ -2,7 +2,7 @@
+ #include <memory>
+ #include <ctime>
+ 
+-#include "app/Game.hpp"
++#include "../app/Game.hpp"
+ 
+ int main(int /* argc */, char * /* argv */[])
+ {
+diff -ruN 2048-original/src/Utils.cpp 2048/src/Utils.cpp
+--- 2048-original/src/Utils.cpp	2017-08-21 14:30:28.000000000 +0200
++++ 2048/src/Utils.cpp	2024-08-05 19:18:55.689344370 +0200
+@@ -1,6 +1,6 @@
+ #include <iostream>
+ 
+-#include "app/Utils.hpp"
++#include "../app/Utils.hpp"
+ 
+ int Utils::randEven(int max)
+ {
