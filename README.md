@@ -1,6 +1,6 @@
 # Verifikacija-softvera
 
-Testiranje aplikacije [2048](https://github.com/HadesD/2048).
+Testiranje konzolne C++ aplikacije [2048](https://github.com/HadesD/2048).
 # Korišćeni alati:
 - Catch2 - jedinični testovi
 - Lcov - pokrivenost koda jediničnim testovima
