@@ -9,5 +9,4 @@ Testiranje aplikacije [2048](https://github.com/HadesD/2048).
   - Callgrind
 - Cppcheck - statička analiza
 
-# Autor
-Nevena Mijailović 1067/23
+## Autor: Nevena Mijailović 1067/23
