@@ -1,0 +1,585 @@
+desc: (none)
+cmd: ../../2048/bin/2048
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2317486
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2432936
+mem_heap_B=72744
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=2464173
+mem_heap_B=73992
+mem_heap_extra_B=144
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=2560193
+mem_heap_B=74344
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=peak
+n3: 74344 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x490D939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n1: 1024 0x4B2DBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B3CCDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B3BF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B3A6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B3A6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B2EFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x499FB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x499FEBA: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+         n1: 1024 0x10B118: Game::drawGameBoard() (Game.cpp:54)
+          n0: 1024 0x10A67C: main (main.cpp:26)
+ n0: 616 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=2630955
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=2673615
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=2771355
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=2874148
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=2973080
+mem_heap_B=74108
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=3075749
+mem_heap_B=74108
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=3176527
+mem_heap_B=74128
+mem_heap_extra_B=192
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=3238513
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=3286205
+mem_heap_B=74108
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=3389393
+mem_heap_B=74108
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=3494154
+mem_heap_B=74128
+mem_heap_extra_B=192
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=3599967
+mem_heap_B=74108
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=detailed
+n3: 74108 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x490D939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n1: 1024 0x4B2DBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B3CCDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B3BF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B3A6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B3A6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B2EFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x499FB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x499FEBA: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+         n1: 1024 0x10B118: Game::drawGameBoard() (Game.cpp:54)
+          n0: 1024 0x10A67C: main (main.cpp:26)
+ n0: 380 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=3705414
+mem_heap_B=74108
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=3808053
+mem_heap_B=74108
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=3906517
+mem_heap_B=74108
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=4012615
+mem_heap_B=74128
+mem_heap_extra_B=192
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=4114882
+mem_heap_B=74128
+mem_heap_extra_B=192
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=4214867
+mem_heap_B=74344
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=4282612
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=4380297
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=4422174
+mem_heap_B=74344
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=4490636
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=4593567
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=4697647
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=detailed
+n3: 74088 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x490D939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n1: 1024 0x4B2DBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B3CCDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B3BF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B3A6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B3A6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B2EFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x499FB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x499FEBA: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+         n1: 1024 0x10B118: Game::drawGameBoard() (Game.cpp:54)
+          n0: 1024 0x10A67C: main (main.cpp:26)
+ n0: 360 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=4737762
+mem_heap_B=74344
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=4807105
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=4848218
+mem_heap_B=74344
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=4916745
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=4956181
+mem_heap_B=74344
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=5058919
+mem_heap_B=74344
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=5129078
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=5168958
+mem_heap_B=74344
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=5237589
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=5277648
+mem_heap_B=74344
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=5346954
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=5391343
+mem_heap_B=74344
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=detailed
+n3: 74344 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x490D939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n1: 1024 0x4B2DBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B3CCDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B3BF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B3A6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B3A6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B2EFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x499FB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x499FEBA: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+         n1: 1024 0x10B118: Game::drawGameBoard() (Game.cpp:54)
+          n0: 1024 0x10A67C: main (main.cpp:26)
+ n0: 616 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=5460654
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=5497905
+mem_heap_B=74344
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=5567211
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=5605835
+mem_heap_B=74324
+mem_heap_extra_B=300
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=5675922
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=5713929
+mem_heap_B=74344
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=5783994
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=detailed
+n3: 74088 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x490D939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n1: 1024 0x4B2DBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B3CCDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B3BF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B3A6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B3A6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B2EFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x499FB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x499FEBA: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+         n1: 1024 0x10B118: Game::drawGameBoard() (Game.cpp:54)
+          n0: 1024 0x10A67C: main (main.cpp:26)
+ n0: 360 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=5829229
+mem_heap_B=74344
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=5926909
+mem_heap_B=74264
+mem_heap_extra_B=240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=6006825
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=6038463
+mem_heap_B=74304
+mem_heap_extra_B=280
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=6118332
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=6150112
+mem_heap_B=74284
+mem_heap_extra_B=260
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=6232062
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=6264718
+mem_heap_B=74264
+mem_heap_extra_B=240
+mem_stacks_B=0
+heap_tree=detailed
+n3: 74264 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x490D939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n1: 1024 0x4B2DBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B3CCDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B3BF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B3A6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B3A6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B2EFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x499FB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x499FEBA: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+         n1: 1024 0x10B118: Game::drawGameBoard() (Game.cpp:54)
+          n0: 1024 0x10A67C: main (main.cpp:26)
+ n0: 536 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=6348231
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=6386078
+mem_heap_B=74264
+mem_heap_extra_B=240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=6468839
+mem_heap_B=74088
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=6508594
+mem_heap_B=2048
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty

@@ -1,0 +1,247 @@
+--------------------------------------------------------------------------------
+Command:            ../../2048/bin/2048
+Massif arguments:   (none)
+ms_print arguments: massif.out.16745
+--------------------------------------------------------------------------------
+
+
+    KB
+72.91^     ##    : :                                        :                 
+     |     # :@@::::::::::::@::::::::::::::::::::::::@@:::::::::::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+     |     # :@ :::::: :::::@:: ::: :::::::::: ::::::@ ::: ::: :::::@:::::@:::
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   29.68
+
+Number of snapshots: 72
+ Detailed snapshots: [2 (peak), 4, 17, 39, 55, 65]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      2,317,486           72,712           72,704             8            0
+  2      2,560,226           74,664           74,344           320            0
+99.57% (74,344B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.37% (72,704B) 0x490D939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->97.37% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->97.37% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->97.37% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->97.37% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->01.37% (1,024B) 0x4B2DBA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.37% (1,024B) 0x4B3CCDF: _IO_doallocbuf (genops.c:347)
+|   ->01.37% (1,024B) 0x4B3BF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->01.37% (1,024B) 0x4B3A6D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->01.37% (1,024B) 0x4B3A6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->01.37% (1,024B) 0x4B2EFD6: fwrite (iofwrite.c:39)
+|           ->01.37% (1,024B) 0x499FB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->01.37% (1,024B) 0x499FEBA: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|               ->01.37% (1,024B) 0x10B118: Game::drawGameBoard() (Game.cpp:54)
+|                 ->01.37% (1,024B) 0x10A67C: main (main.cpp:26)
+|                   
+->00.83% (616B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  3      3,141,450           74,240           74,088           152            0
+  4      3,768,135           74,240           74,088           152            0
+99.80% (74,088B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.93% (72,704B) 0x490D939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->97.93% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->97.93% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->97.93% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->97.93% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->01.38% (1,024B) 0x4B2DBA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.38% (1,024B) 0x4B3CCDF: _IO_doallocbuf (genops.c:347)
+|   ->01.38% (1,024B) 0x4B3BF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->01.38% (1,024B) 0x4B3A6D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->01.38% (1,024B) 0x4B3A6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->01.38% (1,024B) 0x4B2EFD6: fwrite (iofwrite.c:39)
+|           ->01.38% (1,024B) 0x499FB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->01.38% (1,024B) 0x499FEBA: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|               ->01.38% (1,024B) 0x10B118: Game::drawGameBoard() (Game.cpp:54)
+|                 ->01.38% (1,024B) 0x10A67C: main (main.cpp:26)
+|                   
+->00.48% (360B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  5      4,417,335           74,240           74,088           152            0
+  6      4,922,608           74,664           74,344           320            0
+  7      5,333,082           74,240           74,088           152            0
+  8      5,929,198           74,664           74,344           320            0
+  9      6,364,871           74,240           74,088           152            0
+ 10      6,848,143           74,240           74,088           152            0
+ 11      7,352,274           74,504           74,264           240            0
+ 12      7,789,310           74,240           74,088           152            0
+ 13      8,062,859           74,504           74,264           240            0
+ 14      8,528,780           74,240           74,088           152            0
+ 15      8,885,396           74,240           74,088           152            0
+ 16      9,253,660           74,504           74,264           240            0
+ 17      9,723,412           74,504           74,264           240            0
+99.68% (74,264B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.58% (72,704B) 0x490D939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->97.58% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->97.58% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->97.58% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->97.58% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->01.37% (1,024B) 0x4B2DBA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.37% (1,024B) 0x4B3CCDF: _IO_doallocbuf (genops.c:347)
+|   ->01.37% (1,024B) 0x4B3BF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->01.37% (1,024B) 0x4B3A6D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->01.37% (1,024B) 0x4B3A6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->01.37% (1,024B) 0x4B2EFD6: fwrite (iofwrite.c:39)
+|           ->01.37% (1,024B) 0x499FB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->01.37% (1,024B) 0x499FEBA: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|               ->01.37% (1,024B) 0x10B118: Game::drawGameBoard() (Game.cpp:54)
+|                 ->01.37% (1,024B) 0x10A67C: main (main.cpp:26)
+|                   
+->00.72% (536B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 18     10,311,591           74,504           74,264           240            0
+ 19     10,792,139           74,504           74,264           240            0
+ 20     11,270,068           74,504           74,264           240            0
+ 21     11,890,974           74,504           74,264           240            0
+ 22     12,383,822           74,504           74,264           240            0
+ 23     13,009,903           74,504           74,264           240            0
+ 24     13,497,212           74,504           74,264           240            0
+ 25     13,981,955           74,504           74,264           240            0
+ 26     14,677,601           74,504           74,264           240            0
+ 27     15,020,175           74,504           74,264           240            0
+ 28     15,447,897           74,240           74,088           152            0
+ 29     15,934,792           74,240           74,088           152            0
+ 30     16,185,532           74,240           74,088           152            0
+ 31     16,805,523           74,240           74,088           152            0
+ 32     17,286,140           74,240           74,088           152            0
+ 33     17,776,275           74,240           74,088           152            0
+ 34     18,399,767           74,240           74,088           152            0
+ 35     18,803,700           74,240           74,088           152            0
+ 36     19,194,259           74,240           74,088           152            0
+ 37     19,826,774           74,240           74,088           152            0
+ 38     20,255,352           74,504           74,264           240            0
+ 39     20,627,768           74,624           74,324           300            0
+99.60% (74,324B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.43% (72,704B) 0x490D939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->97.43% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->97.43% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->97.43% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->97.43% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->01.37% (1,024B) 0x4B2DBA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.37% (1,024B) 0x4B3CCDF: _IO_doallocbuf (genops.c:347)
+|   ->01.37% (1,024B) 0x4B3BF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->01.37% (1,024B) 0x4B3A6D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->01.37% (1,024B) 0x4B3A6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->01.37% (1,024B) 0x4B2EFD6: fwrite (iofwrite.c:39)
+|           ->01.37% (1,024B) 0x499FB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->01.37% (1,024B) 0x499FEBA: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|               ->01.37% (1,024B) 0x10B118: Game::drawGameBoard() (Game.cpp:54)
+|                 ->01.37% (1,024B) 0x10A67C: main (main.cpp:26)
+|                   
+->00.80% (596B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 40     21,184,418           74,136           73,992           144            0
+ 41     21,598,563           74,240           74,088           152            0
+ 42     21,968,759           74,400           74,168           232            0
+ 43     22,339,215           74,584           74,304           280            0
+ 44     22,921,008           74,400           74,168           232            0
+ 45     23,476,900           74,664           74,344           320            0
+ 46     24,062,375           74,240           74,088           152            0
+ 47     24,685,102           74,240           74,088           152            0
+ 48     24,935,450           74,240           74,088           152            0
+ 49     25,425,939           74,240           74,088           152            0
+ 50     25,677,057           74,240           74,088           152            0
+ 51     25,922,385           74,240           74,088           152            0
+ 52     26,168,800           74,240           74,088           152            0
+ 53     26,419,748           74,240           74,088           152            0
+ 54     26,662,712           74,320           74,128           192            0
+ 55     26,906,108           74,320           74,128           192            0
+99.74% (74,128B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.83% (72,704B) 0x490D939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->97.83% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->97.83% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->97.83% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->97.83% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->01.38% (1,024B) 0x4B2DBA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.38% (1,024B) 0x4B3CCDF: _IO_doallocbuf (genops.c:347)
+|   ->01.38% (1,024B) 0x4B3BF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->01.38% (1,024B) 0x4B3A6D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->01.38% (1,024B) 0x4B3A6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->01.38% (1,024B) 0x4B2EFD6: fwrite (iofwrite.c:39)
+|           ->01.38% (1,024B) 0x499FB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->01.38% (1,024B) 0x499FEBA: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|               ->01.38% (1,024B) 0x10B118: Game::drawGameBoard() (Game.cpp:54)
+|                 ->01.38% (1,024B) 0x10A67C: main (main.cpp:26)
+|                   
+->00.54% (400B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 56     27,182,625           74,504           74,264           240            0
+ 57     27,437,692           74,504           74,264           240            0
+ 58     27,688,552           74,504           74,264           240            0
+ 59     27,953,727           74,504           74,264           240            0
+ 60     28,211,439           74,504           74,264           240            0
+ 61     28,456,678           74,504           74,264           240            0
+ 62     28,701,590           74,504           74,264           240            0
+ 63     28,944,549           74,584           74,304           280            0
+ 64     29,205,639           74,504           74,264           240            0
+ 65     29,479,586           74,504           74,264           240            0
+99.68% (74,264B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.58% (72,704B) 0x490D939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->97.58% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->97.58% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->97.58% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->97.58% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->01.37% (1,024B) 0x4B2DBA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.37% (1,024B) 0x4B3CCDF: _IO_doallocbuf (genops.c:347)
+|   ->01.37% (1,024B) 0x4B3BF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->01.37% (1,024B) 0x4B3A6D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->01.37% (1,024B) 0x4B3A6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->01.37% (1,024B) 0x4B2EFD6: fwrite (iofwrite.c:39)
+|           ->01.37% (1,024B) 0x499FB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->01.37% (1,024B) 0x499FEBA: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|               ->01.37% (1,024B) 0x10B118: Game::drawGameBoard() (Game.cpp:54)
+|                 ->01.37% (1,024B) 0x10A67C: main (main.cpp:26)
+|                   
+->00.72% (536B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 66     29,741,214           74,504           74,264           240            0
+ 67     30,019,092           74,504           74,264           240            0
+ 68     30,262,063           74,400           74,168           232            0
+ 69     30,523,169           74,240           74,088           152            0
+ 70     30,820,537           74,240           74,088           152            0
+ 71     31,124,407           74,096           73,972           124            0
